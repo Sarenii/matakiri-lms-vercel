@@ -1,0 +1,157 @@
+/*
+  If you’re using Google Fonts, you can import them 
+  at the top of your CSS or in your index.html, e.g.:
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*/
+
+/* 1. Global Reset & Font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #daf7e3 0%, #f7f8f9 100%);
+  color: #333;
+}
+
+/* 2. Contact Page Container */
+.contact-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* 3. Header Section */
+.contact-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-header h1 {
+  color: #3fa74a;
+  margin-bottom: 0.8rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* 4. Contact Info Section */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  max-width: 280px;
+  width: 100%;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #3fa74a;
+}
+
+/* 5. Contact Form Container */
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 2rem;
+}
+
+/* 6. Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3fa74a;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* 7. Submit Button */
+.submit-button {
+  background-color: #3fa74a;
+  color: #fff;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.submit-button:hover {
+  background-color: #2e8b57;
+  transform: scale(1.03);
+}
+
+/* 8. Form Status */
+.form-status {
+  margin-top: 1rem;
+  text-align: center;
+  color: #3fa74a;
+  font-weight: 600;
+}
+
+/* 9. Responsive Design */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    max-width: 100%;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+}

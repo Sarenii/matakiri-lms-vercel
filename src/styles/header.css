@@ -1,0 +1,175 @@
+/* ===========================
+   General Header Styles
+   =========================== */
+   .header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===========================
+   Logo Section
+   =========================== */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0; /* Prevents the logo from being cut off on small screens */
+}
+
+.header__logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 100%; /* Ensures the logo scales properly */
+}
+
+.header__logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3fa74a;
+}
+
+/* ===========================
+   Navigation Styles
+   =========================== */
+.header__nav {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.header__nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem; /* Spacing between nav links */
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0; /* Remove default list padding if any */
+}
+
+.header__nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.header__nav-links a:hover {
+    color: #3fa74a;
+}
+
+/* Active link highlight */
+.header__nav-links .active {
+    font-weight: bold;
+    color: #3fa74a;
+    border-bottom: 2px solid #3fa74a;
+}
+
+/* ===========================
+   Call-to-Action (CTA) Styles
+   =========================== */
+.header__cta {
+    margin-left: 2rem; /* Spacing on large screens */
+}
+
+/* Common button styles */
+.btn {
+    background-color: #3fa74a;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2e7e36; /* Slightly darker green on hover */
+}
+
+/* Primary button (Get Started) specific styles */
+.btn-primary {
+    margin-left: 1rem;
+}
+
+/* Logout button styling */
+.btn-logout {
+    background-color: #3fa74a;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #2e7e36; /* Slightly darker green on hover */
+}
+
+/* ===========================
+   Responsive Styles
+   =========================== */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;   /* Stack everything in one column */
+        align-items: flex-start;  /* Left-align items */
+        padding: 0 1rem;
+    }
+
+    .header__logo {
+        margin-bottom: 1rem; /* Spacing below the logo */
+    }
+
+    .header__nav {
+        width: 100%;
+    }
+
+    .header__nav-links {
+        flex-direction: column; /* Vertical nav links */
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .header__cta {
+        /* Override large screen margin for mobile */
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start; /* Align button with the nav links */
+        align-items: center;
+    }
+
+    /* 
+     * Option A: Make the button span the full width on mobile 
+     * (uncomment these lines if you want it 100% wide)
+     */
+    /* 
+    .header__cta .btn {
+        width: 100%;
+        text-align: center;
+    } 
+    */
+
+    /* Option B: Keep the button auto-width, just left-aligned */
+    .header__cta .btn {
+        width: auto;
+        text-align: center; /* or left, as you prefer */
+    }
+}

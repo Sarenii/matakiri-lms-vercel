@@ -1,0 +1,131 @@
+/* ======================================
+   Hero Section Container
+   ====================================== */
+   .hero-section {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Default height for large screens */
+    overflow: hidden;
+}
+
+/* Each Slide */
+.hero-slide {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Matches the hero-section height by default */
+    display: flex;
+    align-items: center;   /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Background Image */
+.hero-slide__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    z-index: -1; /* Places the image behind the content */
+}
+
+/* Slide Text Content */
+.hero-slide__content {
+    position: relative;
+    z-index: 1;         /* Above the image */
+    max-width: 80%;     /* Constrain text width */
+    margin: 0 auto;     /* Center the text horizontally */
+    text-align: center;
+    margin-top: 300px;  /* Push content down a bit on large screens */
+}
+
+.hero-slide__title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d5c740;
+    margin-bottom: 1rem;
+}
+
+.hero-slide__description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+/* CTA Button */
+.hero-slide__button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3fa74a;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-slide__button:hover {
+    background-color: #d5c740;
+}
+
+/* ======================================
+   Slick Carousel Overrides
+   ====================================== */
+.slick-dots {
+    bottom: 10px; /* Adjust dots position if needed */
+}
+
+.slick-dots li button:before {
+    color: #ffffff; /* Dot color */
+    font-size: 0.9rem;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #3fa74a; /* Active dot color */
+}
+
+/* ======================================
+   Responsive Styles
+   ====================================== */
+
+/* --- Tablet and below (<= 768px) --- */
+@media (max-width: 768px) {
+    .hero-section,
+    .hero-slide {
+        /* Instead of a fixed height, let content drive the height on smaller screens */
+        height: auto; 
+    }
+
+    .hero-slide__content {
+        /* Remove large top margin so text isn't pushed too far down on smaller screens */
+        margin-top: 2rem;
+        padding: 1rem; 
+        max-width: 90%; /* Slightly wider container if you want more space */
+    }
+
+    .hero-slide__title {
+        font-size: 2rem;
+    }
+
+    .hero-slide__description {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Mobile and below (<= 480px) --- */
+@media (max-width: 480px) {
+    .hero-slide__title {
+        font-size: 1.6rem;
+    }
+
+    .hero-slide__description {
+        font-size: 1rem;
+    }
+
+    .hero-slide__content {
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,143 @@
+.footer {
+    background-color: rgb(7, 21, 39);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 2rem 1rem;
+}
+
+.footer__newsletter {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: rgba(63, 167, 74, 0.2); /* Transparent background */
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.footer__newsletter h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer__newsletter p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter__form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.newsletter__form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    outline: none;
+}
+
+.newsletter__form button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #3fa74a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter__form button:hover {
+    background-color: #d5c740;
+    color: #ffffff;
+}
+
+.footer__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer__logo {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer__logo h2 {
+    font-size: 2rem;
+    color: #d5c740;
+    margin-bottom: 0.5rem;
+}
+
+.footer__logo p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer__social-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 2.5rem; /* Larger icons */
+}
+
+.footer__social-icons a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer__social-icons a:hover {
+    color: #d5c740;
+}
+
+.footer__links, .footer__contact {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer__links h3, .footer__contact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer__links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__links li {
+    margin: 0.5rem 0;
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer__links a:hover {
+    color: #3fa74a;
+}
+
+.footer__contact p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.footer__bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #d5c740;
+}

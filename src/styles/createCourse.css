@@ -1,0 +1,68 @@
+/* createCourse.css */
+
+.create-course-page {
+    padding: 2rem;
+    font-family: "Helvetica", sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+    color: #071527;
+  }
+  
+  .create-course-page h1 {
+    font-family: "Helvetica75-Bold", sans-serif;
+    color: #071527;
+    margin-bottom: 1.5rem;
+  }
+  
+  .create-course-form {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #071527;
+  }
+  
+  .form-group input, .form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #3fa74a;
+    box-shadow: 0 0 5px rgba(63,167,74,0.3);
+  }
+  
+  .submit-btn {
+    background: #3fa74a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .submit-btn:hover {
+    background: #114d17;
+    transform: scale(1.05);
+  }
+  

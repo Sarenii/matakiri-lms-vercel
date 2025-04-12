@@ -1,0 +1,133 @@
+.modules-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.modules-sidebar {
+  width: 300px;
+  background-color: #f0f7f0;
+  padding: 1rem;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+}
+
+.module-item {
+  margin-bottom: 1rem;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0f2e0;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.module-header.active-module {
+  background: #3fa74a;
+  color: #fff;
+}
+
+.module-title {
+  flex: 1;
+}
+
+.module-progress {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.toggle-icon {
+  margin-left: 10px;
+}
+
+.module-content {
+  background: #fff;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+}
+
+.module-subitem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.content-title {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.content-title:hover {
+  text-decoration: underline;
+}
+
+.content-detail {
+  padding-left: 20px;
+  margin-top: 0.5rem;
+}
+
+.no-contents {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.modules-main {
+  flex: 1;
+  padding: 2rem;
+  background: #fff;
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3fa74a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.download-link {
+  display: block;
+  margin-top: 10px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+.module-progress-area {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.module-progress-label {
+  font-size: 0.85rem;
+  color: #071527;
+}
+.file-block {
+  margin: 1rem 0;
+}

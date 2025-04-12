@@ -1,0 +1,197 @@
+/* src/styles/manageAdmin.css */
+
+/* Common container for both pages */
+.manage-courses-page,
+.manage-users-page {
+  padding: 2rem;
+  font-family: "Helvetica", sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+  color: #071527;
+}
+
+/* Header style for both pages */
+.manage-courses-page h1,
+.manage-users-page h1 {
+  font-family: "Helvetica75-Bold", sans-serif;
+  color: #071527;
+  margin-bottom: 1.5rem;
+}
+
+/* Error message style */
+.error-msg {
+  color: #ff9900;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Table styles (shared by courses and users) */
+.courses-table,
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.courses-table th,
+.courses-table td,
+.users-table th,
+.users-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.courses-table th,
+.users-table th {
+  background: #e0f2e0;
+  font-weight: bold;
+  color: #071527;
+}
+
+/* Courses table: cover image */
+.table-cover {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.table-cover-placeholder {
+  width: 60px;
+  height: 40px;
+  background: #eee;
+  border-radius: 4px;
+}
+
+/* Truncate long descriptions */
+.truncate {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Actions column */
+.actions-col {
+  width: 160px;
+}
+
+/* Actions cell: force side-by-side layout */
+.actions-cell {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+/* Button styles for edit and delete (shared) */
+.edit-btn,
+.delete-btn {
+  background: #3fa74a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background: #114d17;
+  transform: scale(1.05);
+}
+
+/* Specific override for delete button */
+.delete-btn {
+  background: #071527;
+}
+
+.delete-btn:hover {
+  background: #3fa74a;
+}
+
+/* Role select style */
+.role-select {
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  font-size: 1rem;
+}
+
+/* Dialog overlay & box styles */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 90%;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-message {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.dialog-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dialog-btn:hover {
+  transform: scale(1.05);
+}
+
+.dialog-btn.confirm {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.dialog-btn.cancel {
+  background-color: #777;
+  color: #fff;
+}
+
+.info-box {
+  text-align: center;
+}
+
+.dialog-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.dialog-btn.info {
+  background-color: #3fa74a;
+  color: #fff;
+}
