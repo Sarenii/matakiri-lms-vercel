@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Base URL for the backend
-const BASE_URL = "http://127.0.0.1:8000/"; // Backend base URL
+const BASE_URL = "https://lms1-sigma.vercel.app/"; // Backend base URL
 
 // Create an Axios instance with default configurations
 const api = axios.create({
