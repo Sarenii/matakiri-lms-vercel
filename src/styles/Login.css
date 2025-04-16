@@ -174,3 +174,8 @@
 .toggle-password-icon:hover {
   color: #555;
 }
+
+.login-form input {
+  width: 100%;
+  box-sizing: border-box;
+}
