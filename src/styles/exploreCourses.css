@@ -1,138 +1,163 @@
 .explore-courses {
-    padding: 2rem;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
 .explore-courses h2 {
-    font-size: 2rem;
-    color: #312219;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #312219;
+  margin-bottom: 1rem;
 }
 
+/* Search bar container */
 .explore-courses__search {
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
+/* The search input */
 .explore-courses__search input {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.5rem;
-    border: 1px solid #3fa74a;
-    border-radius: 20px;
-    font-size: 1rem;
-    outline: none;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border: 1px solid #3fa74a;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
 }
 
 .explore-courses__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr; /* Overridden inline if multiple courses */
+  gap: 1rem; /* Minimal spacing between course cards */
 }
 
 .course-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
 }
 
 .course-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Course cover image */
 .course-cover {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
+/* Content inside the card */
 .course-card-content {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
+/* Course title */
 .course-card-content h3 {
-    font-size: 1.8rem;
-    color: #312219;
-    margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #312219;
+  margin-bottom: 0.5rem;
 }
 
+/* Brief (truncated) description */
 .brief-description {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
+/* Full description is hidden by default */
 .full-description {
-    font-size: 0.9rem;
-    color: #888;
-    display: none;
+  font-size: 0.9rem;
+  color: #888;
+  display: none;
 }
 
+/* Show full description if toggled */
 .course-card.show-description .full-description {
-    display: block;
-    margin-top: 1rem;
+  display: block;
+  margin-top: 1rem;
 }
 
+/* Actions row: enroll + learn more link */
 .card-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
+/* Enroll button (green) */
 .enroll-btn {
-    background-color: #3fa74a;
-    color: #ffffff;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #3fa74a;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .enroll-btn:hover {
-    background-color: #2e8b3a;
+  background-color: #2e8b3a;
 }
 
-.learn-more-btn {
-    background-color: #312219;
-    color: #ffffff;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Learn More link (green + underlined) */
+.learn-more-link {
+  color: #3fa74a;
+  text-decoration: underline;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: center;
+  padding: 0.4rem 0;
 }
 
-.learn-more-btn:hover {
-    background-color: #5a453b;
+.learn-more-link:hover {
+  color: #2e8b3a;
+  text-decoration: underline;
 }
 
+/* If no courses are found */
+.explore-courses__empty {
+  grid-column: 1 / -1; /* Span across the entire grid */
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .course-card {
-        padding: 1rem;
-    }
+  .course-card {
+    padding: 1rem;
+  }
 
-    .course-cover {
-        height: 200px;
-    }
+  .course-cover {
+    height: 200px;
+  }
 
-    .course-card-content h3 {
-        font-size: 1.5rem;
-    }
+  .course-card-content h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Stack actions vertically if needed */
+  .card-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
